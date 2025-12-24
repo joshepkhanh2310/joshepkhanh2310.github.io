@@ -1,112 +1,142 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Github, Shield, Mail, Linkedin } from "lucide-react";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hoàng Gia Khánh — Cybersecurity Portfolio</title>
 
-export default function Portfolio() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-5xl mx-auto px-4 py-10">
-        <header className="flex flex-col gap-4">
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold"
-          >
-            Hoàng Gia Khánh
-          </motion.h1>
-
-          <div className="flex flex-wrap gap-3 items-center text-sm">
-            <a href="mailto:hoangiakhanh.2310@gmail.com" className="flex items-center gap-1 underline">
-              <Mail className="w-4 h-4" /> hoangiakhanh.2310@gmail.com
-            </a>
-            <a href="https://github.com/joshephkhanh2310" className="flex items-center gap-1 underline">
-              <Github className="w-4 h-4" /> GitHub
-            </a>
-            <a href="#" className="flex items-center gap-1 underline">
-              <Linkedin className="w-4 h-4" /> LinkedIn
-            </a>
-          </div>
-        </header>
-
-        <section className="mt-10">
-          <h2 className="text-2xl font-semibold mb-2 flex items-center gap-2">
-            <Shield className="w-5 h-5" /> Giới thiệu
-          </h2>
-          <p className="text-gray-700">
-            Sinh viên An Toàn Thông Tin FPT University. Định hướng chuyên sâu về SOC, Blue Team, Detection Engineering và Threat Hunting.
-          </p>
-        </section>
-
-        <section className="mt-10">
-          <h2 className="text-2xl font-semibold mb-4">Kỹ năng chuyên môn</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            <Card className="shadow">
-              <CardContent className="p-4">
-                <h3 className="font-semibold mb-2">Ngôn ngữ & Lập trình</h3>
-                <ul className="list-disc ml-5 space-y-1">
-                  <li>Python, C, Assembly</li>
-                  <li>Automation & log parsing</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow">
-              <CardContent className="p-4">
-                <h3 className="font-semibold mb-2">An toàn thông tin</h3>
-                <ul className="list-disc ml-5 space-y-1">
-                  <li>SOC operations & Incident Response</li>
-                  <li>SIEM (Wazuh, ELK Stack)</li>
-                  <li>Threat Detection & Use Case building</li>
-                  <li>Network Security, Packet Tracer</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        <section className="mt-10">
-          <h2 className="text-2xl font-semibold mb-4">Dự án nổi bật</h2>
-
-          <div className="space-y-4">
-            <Card className="shadow">
-              <CardContent className="p-4 space-y-2">
-                <h3 className="font-semibold">Hệ thống SOC mini</h3>
-                <p className="text-gray-700">
-                  Xây dựng SOC cơ bản với SIEM + Dashboard, mô phỏng pipeline thu thập log, phân tích, cảnh báo.
-                </p>
-                <p className="text-sm">Công nghệ: Wazuh, ELK Stack</p>
-                <Button asChild variant="outline">
-                  <a href="https://github.com/joshephkhanh2310">GitHub Project</a>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow">
-              <CardContent className="p-4 space-y-2">
-                <h3 className="font-semibold">Website Blog cá nhân Notion</h3>
-                <p className="text-gray-700">
-                  Blog chia sẻ kiến thức An toàn thông tin và ghi chú học tập.
-                </p>
-                <p className="text-sm">Công nghệ: Notion API, Super.so</p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        <section className="mt-10">
-          <h2 className="text-2xl font-semibold mb-3">Định hướng nghề nghiệp</h2>
-          <ul className="list-disc ml-5 space-y-1 text-gray-700">
-            <li>SOC Analyst Tier 1 → Tier 2</li>
-            <li>Threat Detection Engineering</li>
-            <li>SIEM content development</li>
-          </ul>
-        </section>
-
-        <footer className="mt-14 text-center text-sm text-gray-500">
-          © 2025 Hoàng Gia Khánh — Cybersecurity Portfolio
-        </footer>
-      </div>
-    </div>
-  );
+<style>
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#0d1117;
+  color:white;
+  margin:0;
+  line-height:1.6;
 }
+.container{
+  width:75%;
+  margin:auto;
+}
+.section{
+  padding:25px 0;
+  border-bottom:1px solid #222;
+}
+h1,h2,h3{
+  color:#58a6ff;
+}
+.card{
+  background:#161b22;
+  padding:15px;
+  border-radius:10px;
+  margin-top:10px;
+}
+a{
+  color:#58a6ff;
+  text-decoration:none;
+}
+.tag{
+  display:inline-block;
+  background:#111827;
+  padding:5px 10px;
+  border-radius:8px;
+  margin:5px 5px 0 0;
+  border:1px solid #1f2937;
+}
+.footer{
+  text-align:center;
+  padding:20px;
+  color:grey;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="section">
+  <h1>Hoàng Gia Khánh</h1>
+  <p>Cybersecurity Student | SOC & Blue Team</p>
+  <p>📧 hoangiakhanh.2310@gmail.com</p>
+  <p>
+    🔗 <a href="https://github.com/josephkhanh2310" target="_blank">GitHub</a> •
+    🔗 <a href="#">LinkedIn</a>
+  </p>
+</div>
+
+<!-- INTRO -->
+<div class="section">
+  <h2>Giới thiệu</h2>
+  <div class="card">
+    Sinh viên An Toàn Thông Tin tại FPT University.  
+    Định hướng chuyên sâu về:
+    <ul>
+      <li>SOC Operations</li>
+      <li>Blue Team</li>
+      <li>Detection Engineering</li>
+      <li>Threat Hunting</li>
+      <li>Log Analysis & SIEM</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+  <h2>Kỹ năng chuyên môn</h2>
+  
+  <h3>Ngôn ngữ & lập trình</h3>
+  <div class="card">
+    <span class="tag">Python</span>
+    <span class="tag">C</span>
+    <span class="tag">Assembly</span>
+    <span class="tag">Log Parsing</span>
+  </div>
+
+  <h3>An toàn thông tin</h3>
+  <div class="card">
+    <span class="tag">SOC Analyst</span>
+    <span class="tag">Incident Response</span>
+    <span class="tag">SIEM (Wazuh, ELK)</span>
+    <span class="tag">Detection Engineering</span>
+    <span class="tag">Packet Tracer</span>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+  <h2>Dự án nổi bật</h2>
+
+  <div class="card">
+    <h3>🔹 Hệ thống SOC mini</h3>
+    <p>Xây dựng SOC cơ bản với SIEM + Dashboard. Mô phỏng pipeline thu thập log → phân tích → cảnh báo.</p>
+    <p>⚙️ Công nghệ: Wazuh, ELK Stack</p>
+    <a href="https://github.com/" target="_blank">👉 GitHub Project</a>
+  </div>
+
+  <div class="card">
+    <h3>🔹 Website Blog cá nhân Notion</h3>
+    <p>Chia sẻ kiến thức Blue Team & các ghi chú học tập.</p>
+    <p>⚙️ Công nghệ: Notion API, Super.so</p>
+  </div>
+</div>
+
+<!-- CAREER -->
+<div class="section">
+  <h2>Định hướng nghề nghiệp</h2>
+  <div class="card">
+    <ul>
+      <li>SOC Analyst Tier 1 → Tier 2</li>
+      <li>Threat Detection Engineering</li>
+      <li>Security content development</li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer">
+  © 2025 Hoàng Gia Khánh — Cybersecurity Portfolio
+</div>
+
+</div>
+</body>
+</html>
